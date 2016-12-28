@@ -1,0 +1,13 @@
+<h1>Hello Components!</h1>
+<nav>
+  <a routerLink="/" routerLinkActive="active">Inicio</a>
+  <a routerLink="/companies" routerLinkActive="active">Empresas</a>
+</nav>
+
+<nav>
+  <a *ngFor="let user of users" href="/users/{{ user.id }}">
+    {{ user.name }}&nbsp;
+  </a> 
+</nav>
+
+<router-outlet></router-outlet>
